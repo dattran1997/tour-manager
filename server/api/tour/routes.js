@@ -1,3 +1,4 @@
+
 const TourModel = require('./model');
 const express = require('express');
 
@@ -77,3 +78,4 @@ tourRoute.post('/delete/:id', async function(req,res){
 });
 
 module.exports = tourRoute;
+
