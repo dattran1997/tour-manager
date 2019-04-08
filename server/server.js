@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const apiRouter = require('./api/index');
 const bodyParser = require('body-parser');
+const session = require('express-session');
 const cors = require('cors');
 
 const tourServer = async function(){
@@ -21,6 +22,11 @@ const tourServer = async function(){
             extended: false
         }));
         app.use(bodyParser.json());
+        app.use(session({
+            secret: 'keyboard cat',
+            resave: false,
+            saveUninitialized: true,
+        }));
         app.use(apiRouter);
         
         // start server

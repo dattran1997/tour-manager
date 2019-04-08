@@ -11,5 +11,4 @@ apiRouter.use('/api/user',userRouter);
 apiRouter.use('/api/job',jobRouter);
 apiRouter.use('/api/auth',authRouter);
 
-
 module.exports = apiRouter;
