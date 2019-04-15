@@ -3,6 +3,20 @@ const express = require('express');
 
 const userRoute = express.Router();
 
+userRoute.get('/', async function(req,res){
+    try{
+        const allUser = await UserModel.find();
+        res.json({
+            success: true,
+            allUser: allUser,
+        })
+    }catch(error){
+        res.json({
+            message: error,
+        });
+    }
+});
+
 userRoute.get('/:id',async function(req,res){
     console.log(req.params.id);
     const id = req.params.id;
