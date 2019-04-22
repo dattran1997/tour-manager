@@ -131,17 +131,7 @@ export default class Info extends Component {
 						<li>Bảo hiểm du lịch, mức bồi thường tối đa 10.000 USD/vụ.</li>
 					</ul>
 				</div>
-				<div class="Body-Main-MoreInfo-Right">
-					<h5>Không bao gồm</h5>
-					<ul>
-						<li>Vé xe điện vào Sông DuoYi</li>
-						<li>Vé cáp treo Thác Cửu Long.</li>
-						<li>Phụ thu phòng đơn.</li>
-						<li>Đồ uống, giặt là, điện thoại & chi phí cá nhân.</li>
-						<li>Tiền Tip cho HDV & lái xe ( 3 USD/ngày/người ).</li>
-						<li>Thuế VAT.</li>
-					</ul>
-				</div>
+				
 			</div>
 			// NewTour
       
