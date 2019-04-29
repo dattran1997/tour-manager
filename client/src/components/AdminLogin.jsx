@@ -15,64 +15,14 @@ export default class AdminLogin extends Component {
         }
     }
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+    loginInfoChange = (newInfo) =>{
+        this.setState({
+            login:{
+                ...this.state.login,
+                ... newInfo
+            }
+        });
+    }
 
     loginSubmit = async(event) =>{
         event.preventDefault();
