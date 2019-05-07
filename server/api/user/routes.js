@@ -29,6 +29,7 @@ userRoute.get('/:id',async function(req,res){
         });
     }catch(error){
         res.json({
+            success:false,
             message:error
         });
     }
@@ -96,3 +97,4 @@ userRoute.post('/delete/:id', async function(req,res){
 });
 
 module.exports = userRoute;
+
