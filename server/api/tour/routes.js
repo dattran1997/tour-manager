@@ -1,8 +1,22 @@
-
 const TourModel = require('./model');
 const express = require('express');
 
 const tourRoute = express.Router();
+
+tourRoute.get('/',async function(req,res){
+    try{
+        const allTour = await TourModel.find();
+        console.log(allTour);
+        res.json({
+            success: true,
+            allTour: allTour
+        });
+    }catch(error){
+        res.json({
+            message: error,
+        });
+    }
+});
 
 tourRoute.get('/:id',async function(req,res){
     console.log(req.params.id);
@@ -17,7 +31,6 @@ tourRoute.get('/:id',async function(req,res){
         });
     }catch(error){
         res.json({
-            success:false,
             message:error
         });
     }
@@ -34,7 +47,6 @@ tourRoute.post('/', async function(req,res){
         })
     }catch(error){
         res.json({
-            success:false,
             message:error
         })
     }
@@ -54,8 +66,7 @@ tourRoute.post('/edit/:id', async function(req,res){
         })
     }catch(error){
         res.json({
-            success: false,
-            message:error
+            message:error,
         })
     }
 });
@@ -71,11 +82,9 @@ tourRoute.post('/delete/:id', async function(req,res){
         });
     }catch(error){
         res.json({
-            success:false,
             message:error
         });
     }
 });
 
 module.exports = tourRoute;
-
